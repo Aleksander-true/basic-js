@@ -14,8 +14,8 @@ import { NotImplementedError } from '../extensions/index.js';
  * 
  */
 export default function transform(arr) {
+  if (!Array.isArray(arr)) {throw new Error("'arr' parameter must be an instance of the Array!")};
   let outs = arr.slice();
-  if (!Array.isArray(arr)) throw "'arr' parameter must be an instance of the Array!";
   outs.forEach((item,i,ar) => {
     switch (item) {
       case '--discard-next':

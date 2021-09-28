@@ -29,7 +29,7 @@ export default class VigenereCipheringMachine {
   }
   
   encrypt(text,key) {
-    if (!text || !key) throw "Error";
+    if (!text || !key) throw new Error(`Incorrect arguments!`);
     let codeIndex = 0;
 
     text = text.toUpperCase().split('');
@@ -47,7 +47,7 @@ export default class VigenereCipheringMachine {
   }    
 
   decrypt(text,key) {
-    if (!text || !key) throw "Error";
+    if (!text || !key) throw new Error(`Incorrect arguments!`);
     let codeIndex = 0;
     text = text.toUpperCase().split('');
     key  = key.toUpperCase().repeat(Math.ceil(text.length/key.length)).slice(0,text.length).split('');
