@@ -24,5 +24,3 @@ export default function encodeLine(str) {
   })
   return outs.join('');
 }
-
-console.log(encodeLine('aabbbc'));
